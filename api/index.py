@@ -4,7 +4,8 @@ from api.login import login
 from api.manutencoes import manutencoes
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:3000", "https://api-via-bilidade.vercel.app"])
+
 
 @app.route('/')
 def home():
